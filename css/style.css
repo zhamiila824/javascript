@@ -3,6 +3,12 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+}
+h1, h2, h3{
+    margin: 0;
+    padding: 0;
 }
 .nav{
     position: absolute;
@@ -40,12 +46,96 @@ body{
 .yellow{
     background-color: #FFB400;
     width: 50%;
-    height: 100vh;
+    height: calc(100vh - 100px);
     padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/*.main-text{*/
+/*    margin-left: 12%;*/
+/*    margin-top: 18.5%;*/
+/*}*/
+.main-text h1{
+    font-size: 90px;
+    line-height: 90px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.main-text h2{
+    font-size: 40px;
+    line-height: 53px;
+    color: #FFFFFF;
+}
+.main-text h3{
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.main-text img{
+    margin-left: 30px;
+}
+.row-size{
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    align-items: center;
+}
+.row-size select{
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    width: 84px;
+    height: 26px;
+    padding-left: 10px;
+    font-size: 16px;
+    background: url('../img/Component 11 – 2.svg') no-repeat right #FFB400;
+    -webkit-appearance: none;
+
+}
+.row-size img{
+    margin-left: 0;
+}
+.row-size .equation{
+    margin-left: 16px;
+    width: 207px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.btn{
+    margin-top: 22px;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    box-shadow: 0 0 6px #00000066;
+    border-radius: 18px;
+    width: 163px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btn img{
+    margin-left: 10px;
+}
+.btn a{
+    text-decoration: none;
+    color: #000000;
 }
 .green{
     background-color: #116D00;
     width: 50%;
-    height: 100vh;
+    height: calc(100vh - 100px);
     padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/*.green .main-text{*/
+/*    margin-left: 7.5%;*/
+/*}*/
+.green .row-size select{
+    background-color: #116D00;
 }
