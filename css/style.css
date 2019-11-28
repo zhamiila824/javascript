@@ -91,7 +91,7 @@ h1, h2, h3{
     height: 26px;
     padding-left: 10px;
     font-size: 16px;
-    background: url('../img/Component 11 – 2.svg') no-repeat right #FFB400;
+    background: url('../img/icons/Component 11 – 2.svg') no-repeat right #FFB400;
     -webkit-appearance: none;
 
 }
@@ -138,4 +138,16 @@ h1, h2, h3{
 /*}*/
 .green .row-size select{
     background-color: #116D00;
+}
+.hidden{
+    display: none;
+}
+.minimized{
+    width: 15px;
+}
+.maximized{
+    width: calc(100% - 115px);
+}
+.disable{
+    display: none;
 }
