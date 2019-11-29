@@ -52,6 +52,7 @@ h1, h2, h3{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
 }
 /*.main-text{*/
 /*    margin-left: 12%;*/
@@ -132,6 +133,8 @@ h1, h2, h3{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
+    overflow: hidden;
 }
 /*.green .main-text{*/
 /*    margin-left: 7.5%;*/
@@ -146,7 +149,7 @@ h1, h2, h3{
     width: 15px;
 }
 .maximized{
-    width: calc(100% - 115px);
+    width: calc(100% - 215px);
 }
 .disable{
     display: none;
