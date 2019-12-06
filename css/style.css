@@ -31,6 +31,7 @@ h1, h2, h3{
 .nav-items{
     display: flex;
     align-items: center;
+    height: 50px;
 }
 .nav-items a{
     margin-left: 25px;
@@ -43,6 +44,51 @@ h1, h2, h3{
     width: 50px;
     border-radius: 50%;
 }
+.scroll{
+    border: 1px solid white;
+    position: relative;
+    width: 0;
+    height: 300px;
+}
+.yellow .scroll{
+    margin-left: 7.5px;
+}
+.green .scroll{
+    margin-right: 7.5px;
+}
+.scroll form{
+    position: absolute;
+    width: 15px;
+    left: -7.5px;
+    top: -3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.scroll form span{
+    background-color: #fff;
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    display: block;
+}
+.scroll span input{
+    cursor: pointer;
+    margin-left: -7.5px;
+    margin-top: -3px;
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+}
+.scroll form span:not(:last-child){
+    margin-bottom: 67px;
+    padding: 0;
+}
+.scroll form span.checked{
+    height: 16px;
+    width: 16px;
+    box-shadow: 0px 3px 6px #00000029;
+}
 .yellow{
     background-color: #FFB400;
     width: 50%;
@@ -51,13 +97,23 @@ h1, h2, h3{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
+}
+.yellow .yellow-right{
+    margin-left: auto;
 }
 /*.main-text{*/
 /*    margin-left: 12%;*/
 /*    margin-top: 18.5%;*/
 /*}*/
+.main-text{
+    margin-top: auto;
+    transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
+}
+.yellow .main-text{
+    margin-left: 57.5px;
+}
 .main-text h1{
     font-size: 90px;
     line-height: 90px;
@@ -76,6 +132,10 @@ h1, h2, h3{
 }
 .main-text img{
     margin-left: 30px;
+    margin-top: 50px;
+}
+.hidden-text{
+    display: none;
 }
 .row-size{
     height: 30px;
@@ -98,6 +158,7 @@ h1, h2, h3{
 }
 .row-size img{
     margin-left: 0;
+    margin-top: 0;
 }
 .row-size .equation{
     margin-left: 16px;
@@ -119,6 +180,7 @@ h1, h2, h3{
 }
 .btn img{
     margin-left: 10px;
+    margin-top: 0;
 }
 .btn a{
     text-decoration: none;
@@ -142,9 +204,6 @@ h1, h2, h3{
 .green .row-size select{
     background-color: #116D00;
 }
-.hidden{
-    display: none;
-}
 .minimized{
     width: 15px;
 }
@@ -153,4 +212,7 @@ h1, h2, h3{
 }
 .disable{
     display: none;
+}
+.active{
+    display: block;
 }

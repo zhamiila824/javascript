@@ -1,10 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(){
+
     let leftSide = document.querySelector('.yellow');
     let rightSide = document.querySelector('.green');
     let leftBtn = document.querySelector('.yellow-right');
     let rightBtn = document.querySelector('.green-left');
-    let rightContent = document.querySelector('.green-content');
     let leftContent = document.querySelector('.yellow-content');
+    let rightContent = document.querySelector('.green-content');
+    let leftInfo = document.querySelector('.hidden-text-left');
+    let rightInfo = document.querySelector('.hidden-text-right');
+    let leftScroll = document.querySelector('.left-scroll');
+    let rightScroll = document.querySelector('.right-scroll');
 
     leftBtn.onclick = function() {
         if(leftSide.classList.contains('minimized')){
@@ -14,16 +19,21 @@ document.addEventListener('DOMContentLoaded', function(){
             rightSide.classList.add('minimized');
             leftContent.classList.remove('disable');
             rightContent.classList.add('disable');
+            leftScroll.classList.remove('disable');
         }
         else if(leftSide.classList.contains('maximized')){
             leftSide.classList.remove('maximized');
             rightSide.classList.remove('minimized');
+            leftInfo.classList.remove('active');
             rightContent.classList.remove('disable');
+            rightScroll.classList.remove('disable');
         }
         else{
             leftSide.classList.add('maximized');
             rightSide.classList.add('minimized');
+            leftInfo.classList.add('active');
             rightContent.classList.add('disable');
+            rightScroll.classList.add('disable');
         }
     };
 
@@ -35,81 +45,19 @@ document.addEventListener('DOMContentLoaded', function(){
             leftSide.classList.add('minimized');
             rightContent.classList.remove('disable');
             leftContent.classList.add('disable');
+            rightScroll.classList.remove('disable');
         }
         else if(rightSide.classList.contains('maximized')){
             rightSide.classList.remove('maximized');
             leftSide.classList.remove('minimized');
             leftContent.classList.remove('disable');
+            leftScroll.classList.remove('disable');
         }
         else{
             rightSide.classList.add('maximized');
             leftSide.classList.add('minimized');
             leftContent.classList.add('disable');
+            leftScroll.classList.add('disable');
         }
     };
-    // leftBtn.onclick = function() {
-    //     if(rightSide.classList.contains('minimaized')){
-    //
-    //         leftSide.classList.remove('maximaized');
-    //         rightSide.classList.remove('minimaized');
-    //
-    //         leftBtn.classList.remove('go-right');
-    //         rightBtn.classList.remove('go-right');
-    //     } else if(leftSide.classList.contains('minimaized')){
-    //
-    //         rightSide.classList.remove('maximaized');
-    //         rightSide.classList.add('minimaized');
-    //         leftSide.classList.add('maximaized');
-    //         leftSide.classList.remove('minimaized');
-    //
-    //         leftBtn.classList.remove('go-left');
-    //         rightBtn.classList.remove('go-left');
-    //         leftBtn.classList.add('go-right');
-    //         rightBtn.classList.add('go-right');
-    //     } else{
-    //
-    //         leftSide.classList.add('maximaized');
-    //         rightSide.classList.add('minimaized');
-    //
-    //         leftBtn.classList.add('go-right');
-    //         rightBtn.classList.add('go-right');
-    //     };
-    //
-    //     if(rightSide.classList.contains('minimaized')){
-    //
-    //         leftImg.classList.add('animated');
-    //         leftCalculator.classList.add('animated');
-    //         leftCostBox.classList.add('animated');
-    //         leftAvatars.classList.add('animated');
-    //         leftAvatars.classList.remove('visibleHidden');
-    //
-    //     } else {
-    //
-    //         leftImg.classList.remove('animated');
-    //         leftCalculator.classList.remove('animated');
-    //         leftCostBox.classList.remove('animated');
-    //         leftAvatars.classList.remove('animated');
-    //         leftAvatars.classList.add('visibleHidden');
-    //
-    //     }
-    //
-    //     if (leftItemInfo.classList.contains('hidden')) {
-    //         leftItemInfo.classList.remove('hidden');
-    //         setTimeout(function () {
-    //             leftItemInfo.classList.remove('visibleHidden');
-    //         }, 20);
-    //     } else {
-    //         leftItemInfo.classList.add('visibleHidden');
-    //         setTimeout(function () {
-    //             leftItemInfo.classList.add('hidden');
-    //         }, 400);
-    //     };
-    //
-    //
-    //
-    // };
-
-
-
-
 });
