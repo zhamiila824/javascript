@@ -50,10 +50,10 @@ h1, h2, h3{
     width: 0;
     height: 300px;
 }
-.yellow .scroll{
+.left-scroll{
     margin-left: 7.5px;
 }
-.green .scroll{
+.right-scroll{
     margin-right: 7.5px;
 }
 .scroll form{

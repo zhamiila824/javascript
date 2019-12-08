@@ -6,10 +6,16 @@ document.addEventListener('DOMContentLoaded', function(){
     let rightBtn = document.querySelector('.green-left');
     let leftContent = document.querySelector('.yellow-content');
     let rightContent = document.querySelector('.green-content');
-    let leftInfo = document.querySelector('.hidden-text-left');
-    let rightInfo = document.querySelector('.hidden-text-right');
     let leftScroll = document.querySelector('.left-scroll');
     let rightScroll = document.querySelector('.right-scroll');
+
+    // leftBtn.addEventListener('click', () => {
+    //     leftSide.classList.toggle('maximized');
+    //     rightSide.classList.toggle('minimized');
+    //     rightContent.classList.toggle('disable');
+    //     rightScroll.classList.toggle('disable');
+    //
+    // });
 
     leftBtn.onclick = function() {
         if(leftSide.classList.contains('minimized')){
@@ -20,18 +26,17 @@ document.addEventListener('DOMContentLoaded', function(){
             leftContent.classList.remove('disable');
             rightContent.classList.add('disable');
             leftScroll.classList.remove('disable');
+            rightScroll.classList.add('disable');
         }
         else if(leftSide.classList.contains('maximized')){
             leftSide.classList.remove('maximized');
             rightSide.classList.remove('minimized');
-            leftInfo.classList.remove('active');
             rightContent.classList.remove('disable');
             rightScroll.classList.remove('disable');
         }
         else{
             leftSide.classList.add('maximized');
             rightSide.classList.add('minimized');
-            leftInfo.classList.add('active');
             rightContent.classList.add('disable');
             rightScroll.classList.add('disable');
         }
@@ -46,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function(){
             rightContent.classList.remove('disable');
             leftContent.classList.add('disable');
             rightScroll.classList.remove('disable');
+            leftScroll.classList.add('disable');
         }
         else if(rightSide.classList.contains('maximized')){
             rightSide.classList.remove('maximized');
