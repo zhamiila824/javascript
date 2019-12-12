@@ -87,10 +87,12 @@ h1, h2, h3{
 .scroll form span.checked{
     height: 16px;
     width: 16px;
-    box-shadow: 0px 3px 6px #00000029;
+    box-shadow: 0 3px 6px #00000029;
 }
-.yellow{
-    background-color: #FFB400;
+.green .scroll{
+    margin-left: auto;
+}
+.half{
     width: 50%;
     height: calc(100vh - 100px);
     padding: 50px;
@@ -99,6 +101,13 @@ h1, h2, h3{
     align-items: center;
     justify-content: flex-start;
     transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
+    overflow: hidden;
+}
+.yellow{
+    background-color: #FFB400;
+}
+.green{
+    background-color: #116D00;
 }
 .yellow .yellow-right{
     margin-left: auto;
@@ -108,34 +117,95 @@ h1, h2, h3{
 /*    margin-top: 18.5%;*/
 /*}*/
 .main-text{
+    width: 100%;
     margin-top: auto;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
 }
 .yellow .main-text{
-    margin-left: 57.5px;
+    margin-left: 57px;
 }
-.main-text h1{
+.green .main-text{
+    margin-left: 20px;
+}
+.titles h1{
     font-size: 90px;
     line-height: 90px;
     text-transform: uppercase;
     color: #FFFFFF;
 }
-.main-text h2{
+.titles h2{
     font-size: 40px;
     line-height: 53px;
     color: #FFFFFF;
 }
-.main-text h3{
+.titles h3{
     font-size: 20px;
     line-height: 26px;
     color: #FFFFFF;
 }
-.main-text img{
-    margin-left: 30px;
-    margin-top: 50px;
+.main-pic{
+    position: absolute;
+    top: 360px;
+    overflow: visible;
+    transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
+}
+.yellow .main-pic{
+    left: 146px;
+}
+.green .main-pic{
+    right: 130px;
 }
 .hidden-text{
+    color: #FFFFFF;
     display: none;
+}
+.main-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 176px;
+}
+.kkal li:not(:last-child){
+    border-bottom: 1px solid #FFFFFF;
+}
+.kkal li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.store{
+    margin-left: 53px;
+    height: 94px;
+    width: 108px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pics, .store-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.store-text{
+    width: 78px;
+}
+.add-info{
+    color: #FFFFFF;
+}
+.add-info img{
+    transform: rotate(-90deg);
+}
+.row{
+    width: 100%;
 }
 .row-size{
     height: 30px;
@@ -186,18 +256,6 @@ h1, h2, h3{
     text-decoration: none;
     color: #000000;
 }
-.green{
-    background-color: #116D00;
-    width: 50%;
-    height: calc(100vh - 100px);
-    padding: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
-    overflow: hidden;
-}
 /*.green .main-text{*/
 /*    margin-left: 7.5%;*/
 /*}*/
@@ -215,4 +273,29 @@ h1, h2, h3{
 }
 .active{
     display: block;
+}
+.bigger{
+    width: 600px;
+    height: auto;
+    top: 170px;
+    right: 50px;
+}
+.yellow .bigger{
+    left: 475px;
+}
+.green .bigger{
+    right: 50px;
+}
+.vmeste{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.vmeste .btn{
+    margin-top: 0;
+    margin-left: 20px;
+}
+.row .likes{
+    margin-left: 160px;
 }
