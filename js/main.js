@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function(){
     let rightHidden = document.querySelector('.green .hidden-text');
     let leftRow = document.querySelector('.yellow .row');
     let rightRow = document.querySelector('.green .row');
+    let leftLikes = document.querySelector('.yellow .likes');
+    let rightLikes = document.querySelector('.green .likes');
     let formScroll = document.querySelectorAll('.scroll');
 
     // leftBtn.addEventListener('click', () => {
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function(){
             leftImg.classList.add('bigger');
             leftRow.classList.add('vmeste');
             leftHidden.classList.add('active');
+            leftLikes.classList.remove('disable');
             rightHidden.classList.remove('active');
             rightImg.classList.remove('bigger');
             rightSide.classList.remove('maximized');
@@ -39,21 +42,26 @@ document.addEventListener('DOMContentLoaded', function(){
             rightContent.classList.add('disable');
             leftScroll.classList.remove('disable');
             rightScroll.classList.add('disable');
+            rightLikes.classList.add('disable');
         }
         else if(leftSide.classList.contains('maximized')){
             leftSide.classList.remove('maximized');
             leftImg.classList.remove('bigger');
             leftRow.classList.remove('vmeste');
             leftHidden.classList.remove('active');
+            leftLikes.classList.add('disable');
             rightSide.classList.remove('minimized');
             rightContent.classList.remove('disable');
             rightScroll.classList.remove('disable');
+            rightRow.classList.remove('vmeste');
+            rightLikes.classList.add('disable');
         }
         else{
             leftSide.classList.add('maximized');
             leftImg.classList.add('bigger');
             leftRow.classList.add('vmeste');
             leftHidden.classList.add('active');
+            leftLikes.classList.remove('disable');
             rightSide.classList.add('minimized');
             rightContent.classList.add('disable');
             rightScroll.classList.add('disable');
@@ -67,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function(){
             rightImg.classList.add('bigger');
             rightHidden.classList.add('active');
             rightRow.classList.add('vmeste');
+            rightLikes.classList.remove('disable');
             leftImg.classList.remove('bigger');
             leftRow.classList.remove('vmeste');
             leftSide.classList.remove('maximized');
@@ -75,21 +84,27 @@ document.addEventListener('DOMContentLoaded', function(){
             leftContent.classList.add('disable');
             rightScroll.classList.remove('disable');
             leftScroll.classList.add('disable');
+            leftLikes.classList.add('disable');
         }
         else if(rightSide.classList.contains('maximized')){
             rightSide.classList.remove('maximized');
             rightImg.classList.remove('bigger');
             rightHidden.classList.remove('active');
             rightRow.classList.remove('vmeste');
+            rightLikes.classList.add('disable');
             leftSide.classList.remove('minimized');
             leftContent.classList.remove('disable');
             leftScroll.classList.remove('disable');
+            leftHidden.classList.remove('active');
+            leftRow.classList.remove('vmeste');
+            leftLikes.classList.add('disable');
         }
         else{
             rightSide.classList.add('maximized');
             rightImg.classList.add('bigger');
             rightHidden.classList.add('active');
             rightRow.classList.add('vmeste');
+            rightLikes.classList.remove('disable');
             leftSide.classList.add('minimized');
             leftContent.classList.add('disable');
             leftScroll.classList.add('disable');

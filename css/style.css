@@ -3,6 +3,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
     font-size: 16px;
     line-height: 21px;
 }
@@ -25,7 +26,6 @@ h1, h2, h3{
     position: absolute;
     left: 50%;
     margin-left: -22px;
-    color: #FFFFFF;
     font-weight: bold;
 }
 .nav-items{
@@ -123,7 +123,7 @@ h1, h2, h3{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
+    transition: all 0.3s;
 }
 .yellow .main-text{
     margin-left: 57px;
@@ -135,33 +135,26 @@ h1, h2, h3{
     font-size: 90px;
     line-height: 90px;
     text-transform: uppercase;
-    color: #FFFFFF;
 }
 .titles h2{
     font-size: 40px;
     line-height: 53px;
-    color: #FFFFFF;
 }
 .titles h3{
     font-size: 20px;
     line-height: 26px;
-    color: #FFFFFF;
 }
 .main-pic{
     position: absolute;
     top: 360px;
     overflow: visible;
-    transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
+    transition: all 0.4s;
 }
 .yellow .main-pic{
     left: 146px;
 }
 .green .main-pic{
     right: 130px;
-}
-.hidden-text{
-    color: #FFFFFF;
-    display: none;
 }
 .main-info{
     display: flex;
@@ -198,9 +191,6 @@ ul{
 .store-text{
     width: 78px;
 }
-.add-info{
-    color: #FFFFFF;
-}
 .add-info img{
     transform: rotate(-90deg);
 }
@@ -211,7 +201,6 @@ ul{
     height: 30px;
     display: flex;
     flex-direction: row;
-    color: #FFFFFF;
     align-items: center;
 }
 .row-size select{
@@ -238,6 +227,7 @@ ul{
     justify-content: space-between;
 }
 .btn{
+    color: #000000;
     margin-top: 22px;
     background: #FFFFFF 0 0 no-repeat padding-box;
     box-shadow: 0 0 6px #00000066;
@@ -261,6 +251,39 @@ ul{
 /*}*/
 .green .row-size select{
     background-color: #116D00;
+}
+.likes{
+    color: #FFFFFF;
+    width: 278px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition-delay: 0.5s;
+    transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
+}
+.likes ul{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.likes-profiles{
+    width: 80px;
+}
+.likes-profiles img{
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    max-height: 30px;
+    display: block;
+    margin-left: -10px;
+}
+.likes .line{
+    height: 0;
+    width: 139px;
+    border: 1px solid #FFFFFF;
+}
+
+.hidden-text{
+    display: none;
 }
 .minimized{
     width: 15px;
