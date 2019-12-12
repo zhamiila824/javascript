@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let rightRow = document.querySelector('.green .row');
     let leftLikes = document.querySelector('.yellow .likes');
     let rightLikes = document.querySelector('.green .likes');
-    let formScroll = document.querySelectorAll('.scroll');
+    let formScroll = document.querySelectorAll('.form-scroll');
 
     // leftBtn.addEventListener('click', () => {
     //     leftSide.classList.toggle('maximized');
