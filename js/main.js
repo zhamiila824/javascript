@@ -1,29 +1,35 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', () => {
+    'use strict';
 
-    let leftSide = document.querySelector('.yellow');
-    let rightSide = document.querySelector('.green');
-    let leftBtn = document.querySelector('.yellow-right');
-    let rightBtn = document.querySelector('.green-left');
-    let leftContent = document.querySelector('.yellow-content');
-    let rightContent = document.querySelector('.green-content');
-    let leftScroll = document.querySelector('.left-scroll');
-    let rightScroll = document.querySelector('.right-scroll');
-    let leftImg = document.querySelector('.yellow .main-pic');
-    let rightImg = document.querySelector('.green .main-pic');
-    let leftHidden = document.querySelector('.yellow .hidden-text');
-    let rightHidden = document.querySelector('.green .hidden-text');
-    let leftRow = document.querySelector('.yellow .row');
-    let rightRow = document.querySelector('.green .row');
-    let leftLikes = document.querySelector('.yellow .likes');
-    let rightLikes = document.querySelector('.green .likes');
-    let formScroll = document.querySelectorAll('.form-scroll');
+    const leftSide = document.querySelector('.yellow'),
+        rightSide = document.querySelector('.green'),
+        leftBtn = document.querySelector('.yellow-right'),
+        rightBtn = document.querySelector('.green-left'),
+        leftContent = document.querySelector('.yellow-content'),
+        rightContent = document.querySelector('.green-content'),
+        leftScroll = document.querySelector('.left-scroll'),
+        rightScroll = document.querySelector('.right-scroll'),
+        leftImg = document.querySelector('.yellow .main-pic'),
+        rightImg = document.querySelector('.green .main-pic'),
+        leftHidden = document.querySelector('.yellow .hidden-text'),
+        rightHidden = document.querySelector('.green .hidden-text'),
+        leftRow = document.querySelector('.yellow .row'),
+        rightRow = document.querySelector('.green .row'),
+        leftLikes = document.querySelector('.yellow .likes'),
+        rightLikes = document.querySelector('.green .likes'),
+        formScroll = document.querySelectorAll('.form-scroll');
 
     // leftBtn.addEventListener('click', () => {
     //     leftSide.classList.toggle('maximized');
+    //     leftImg.classList.toggle('bigger');
+    //     leftRow.classList.toggle('vmeste');
+    //     leftHidden.classList.toggle('active');
+    //     leftLikes.classList.toggle('disable');
     //     rightSide.classList.toggle('minimized');
     //     rightContent.classList.toggle('disable');
     //     rightScroll.classList.toggle('disable');
-    //
+
+
     // });
 
     leftBtn.onclick = function() {
