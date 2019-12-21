@@ -145,10 +145,15 @@ h1, h2, h3{
     line-height: 26px;
 }
 .main-pic{
+    width: calc(49vw - 220px);
     position: absolute;
     top: 360px;
-    overflow: visible;
-    transition: all 0.4s;
+    transition-delay: 0.5s;
+    transition: all 0.3s cubic-bezier(1, 0.66, 0.33, 0);
+}
+.main-pic img{
+    width: 100%;
+    display: block;
 }
 .yellow .main-pic{
     left: 146px;
@@ -298,7 +303,7 @@ ul{
     display: block;
 }
 .bigger{
-    width: 600px;
+    width: calc(90vw - 310px - 220px);
     height: auto;
     top: 170px;
     right: 50px;

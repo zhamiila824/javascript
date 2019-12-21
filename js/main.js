@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if(leftSide.classList.contains('minimized')){
             leftSide.classList.remove('minimized');
             leftSide.classList.add('maximized');
-            leftImg.classList.add('bigger');
             leftRow.classList.add('vmeste');
             leftHidden.classList.add('active');
             leftLikes.classList.remove('disable');
@@ -49,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             leftScroll.classList.remove('disable');
             rightScroll.classList.add('disable');
             rightLikes.classList.add('disable');
+            leftImg.classList.add('bigger');
         }
         else if(leftSide.classList.contains('maximized')){
             leftSide.classList.remove('maximized');
@@ -64,13 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         else{
             leftSide.classList.add('maximized');
-            leftImg.classList.add('bigger');
             leftRow.classList.add('vmeste');
             leftHidden.classList.add('active');
             leftLikes.classList.remove('disable');
             rightSide.classList.add('minimized');
             rightContent.classList.add('disable');
             rightScroll.classList.add('disable');
+            leftImg.classList.add('bigger');
         }
     };
 
